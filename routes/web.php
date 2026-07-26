@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeacherController;
-use App\Http\Controllers\Student\Controller;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\MajorClass\CreateController;
 use App\Http\Controllers\MajorClass\DestroyController;
 use App\Http\Controllers\MajorClass\EditController;

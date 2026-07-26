@@ -5,11 +5,8 @@ namespace App\Http\Controllers\MajorClass;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class destroy extends Controller
+class ShowController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(Request $request)
     {
         //

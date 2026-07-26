@@ -5,7 +5,7 @@ namespace App\Http\Controllers\MajorClass;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class index extends Controller
+class IndexController extends Controller
 {
     /**
      * Handle the incoming request.

@@ -5,11 +5,8 @@ namespace App\Http\Controllers\MajorClass;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class store extends Controller
+class CreateController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(Request $request)
     {
         //
