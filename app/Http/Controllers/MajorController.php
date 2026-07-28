@@ -11,7 +11,7 @@ class MajorController extends Controller
      */
     public function index()
     {
-        return "Ini adalah halaman daftar jurusan";
+        return "Menampilkan halaman daftar jurusan";
     }
 
     /**
@@ -19,7 +19,7 @@ class MajorController extends Controller
      */
     public function create()
     {
-        return "Ini adalah halaman untuk membuat jurusan baru";
+        return "Menampilkan halaman tambah jurusan";
     }
 
     /**
@@ -27,7 +27,7 @@ class MajorController extends Controller
      */
     public function store(Request $request)
     {
-        return "Menyimpan data jurusan baru";
+        return "Melakukan penambahan data jurusan";
     }
 
     /**
@@ -43,7 +43,7 @@ class MajorController extends Controller
      */
     public function edit(string $id)
     {
-        return "Ini adalah halaman untuk mengedit jurusan dengan ID: {$id}";
+        return "Menampilkan halaman edit jurusan";
     }
 
     /**
@@ -51,7 +51,7 @@ class MajorController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        return "Memperbarui data jurusan dengan ID: {$id}";
+        return "Melakukan perubahan data jurusan";
     }
 
     /**
@@ -59,6 +59,6 @@ class MajorController extends Controller
      */
     public function destroy(string $id)
     {
-        return "Menghapus data jurusan dengan ID: {$id}";
+        return "Menghapus data jurusan";
     }
 }

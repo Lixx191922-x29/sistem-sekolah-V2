@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
+    /**
+     * Handle the incoming request.
+     */
     public function __invoke(Request $request)
     {
-        //
+        return "Menampilkan detail kelas dengan ID: {$id}";
     }
 }

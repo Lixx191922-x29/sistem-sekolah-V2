@@ -8,7 +8,7 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        return "Ini adalah halaman daftar guru";
+        return "Menampilkan halaman daftar guru";
     }
 
     public function show($id)
@@ -18,26 +18,26 @@ class TeacherController extends Controller
 
     public function create()
     {
-        return "Ini adalah halaman untuk membuat guru baru";
+        return "Menampilkan halaman tambah guru";
     }
 
     public function store(Request $request)
     {
-        return "Menyimpan data guru baru";
+        return "Melakukan penambahan data guru";
     }
 
     public function edit($id)
     {
-        return "Ini adalah halaman untuk mengedit guru dengan ID: {$id}";
+        return "Menampilkan halaman edit guru";
     }
 
     public function update(Request $request, $id)
     {
-        return "Memperbarui data guru dengan ID: {$id}";
+        return "Melakukan perubahan data guru";
     }
 
     public function destroy($id)
     {
-        return "Menghapus data guru dengan ID: {$id}";
+        return "Menghapus data guru";
     }
 }

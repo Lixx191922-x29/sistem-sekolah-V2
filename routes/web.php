@@ -51,22 +51,22 @@ Route::name('students.')->prefix('students')->group(function () {
     Route::delete('/{id}', [StudentController::class, 'destroy'])->name('destroy');
 });
 
-// Manajemen Kelas (Invokable)
-Route::name('classes.')->prefix('classes')->group(function () {
-    Route::get('/', IndexController::class)->name('index');
+ Manajemen Kelas (Invokable)
+ Route::name('classes.')->prefix('classes')->group(function () {
+     Route::get('/', IndexController::class)->name('index');
 
-    Route::get('/{id}', ShowController::class)->name('show');
+     Route::get('/{id}', ShowController::class)->name('show');
 
-    Route::get('/create', CreateController::class)->name('create');
+     Route::get('/create', CreateController::class)->name('create');
 
-    Route::post('/', StoreController::class)->name('store');
+     Route::post('/', StoreController::class)->name('store');
 
-    Route::get('/{id}/edit', EditController::class)->name('edit');
+     Route::get('/{id}/edit', EditController::class)->name('edit');
 
-    Route::put('/{id}', UpdateController::class)->name('update');
+     Route::put('/{id}', UpdateController::class)->name('update');
 
-    Route::delete('/{id}', DestroyController::class)->name('destroy');
-});
+     Route::delete('/{id}', DestroyController::class)->name('destroy');
+ });
 
 // Manajemen Jurusan
 Route::resource('majors', MajorController::class);
