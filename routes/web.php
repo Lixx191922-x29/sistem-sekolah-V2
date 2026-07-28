@@ -2,13 +2,13 @@
 
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\MajorClass\CreateController;
-use App\Http\Controllers\MajorClass\DestroyController;
-use App\Http\Controllers\MajorClass\EditController;
-use App\Http\Controllers\MajorClass\IndexController;
-use App\Http\Controllers\MajorClass\ShowController;
-use App\Http\Controllers\MajorClass\StoreController;
-use App\Http\Controllers\MajorClass\UpdateController;
+use App\Http\Controllers\SchoolClass\CreateController;
+use App\Http\Controllers\SchoolClass\DestroyController;
+use App\Http\Controllers\SchoolClass\EditController;
+use App\Http\Controllers\SchoolClass\IndexController;
+use App\Http\Controllers\SchoolClass\ShowController;
+use App\Http\Controllers\SchoolClass\StoreController;
+use App\Http\Controllers\SchoolClass\UpdateController;
 use App\Http\Controllers\MajorController; 
 
 use Illuminate\Support\Facades\Route;
