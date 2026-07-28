@@ -51,7 +51,7 @@ Route::name('students.')->prefix('students')->group(function () {
     Route::delete('/{id}', [StudentController::class, 'destroy'])->name('destroy');
 });
 
- Manajemen Kelas (Invokable)
+ // Manajemen Kelas (Invokable)
  Route::name('classes.')->prefix('classes')->group(function () {
      Route::get('/', IndexController::class)->name('index');
 
