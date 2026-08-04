@@ -25,11 +25,9 @@ Route::name('teachers.')->prefix('teachers')->group(function () {
 
     Route::get('/create', [TeacherController::class, 'create'])->name('create');
 
-     Route::get('/{id}/edit', [TeacherController::class, 'edit'])->name('edit');
+    Route::get('/{id}/edit', [TeacherController::class, 'edit'])->name('edit');
 
     Route::post('/', [TeacherController::class, 'store'])->name('store');
-
-   
 
     Route::put('/{id}', [TeacherController::class, 'update'])->name('update');
 
