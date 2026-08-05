@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // Manajemen Guru
 Route::name('teachers.')->prefix('teachers')->group(function () {
     Route::get('/', [TeacherController::class, 'index'])->name('index');
