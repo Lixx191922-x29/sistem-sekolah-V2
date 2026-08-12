@@ -71,18 +71,21 @@ class MajorController extends Controller
         $majors = [
             [
                 'id' => 1,
+                'code' => 'TI',
                 'name' => 'Teknologi Informasi',
                 'description' => 'Jurusan untuk layanan jaringan dan pemrograman.',
                 'classes_count' => 4,
             ],
             [
                 'id' => 2,
+                'code' => 'AK',
                 'name' => 'Akuntansi',
                 'description' => 'Jurusan untuk pembukuan dan keuangan.',
                 'classes_count' => 3,
             ],
             [
                 'id' => 3,
+                'code' => 'BI',
                 'name' => 'Bisnis dan Industri',
                 'description' => 'Jurusan untuk manajemen bisnis dan pemasaran.',
                 'classes_count' => 2,
@@ -107,18 +110,21 @@ class MajorController extends Controller
         $majors = [
             [
                 'id' => 1,
+                'code' => 'TI',
                 'name' => 'Teknologi Informasi',
                 'description' => 'Jurusan untuk layanan jaringan dan pemrograman.',
                 'classes_count' => 4,
             ],
             [
                 'id' => 2,
+                'code' => 'AK',
                 'name' => 'Akuntansi',
                 'description' => 'Jurusan untuk pembukuan dan keuangan.',
                 'classes_count' => 3,
             ],
             [
                 'id' => 3,
+                'code' => 'BI',
                 'name' => 'Bisnis dan Industri',
                 'description' => 'Jurusan untuk manajemen bisnis dan pemasaran.',
                 'classes_count' => 2,

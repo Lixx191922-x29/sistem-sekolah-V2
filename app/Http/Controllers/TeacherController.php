@@ -91,7 +91,20 @@ class TeacherController extends Controller
 
     public function store(Request $request)
     {
-        return "Melakukan penambahan data guru";
+        $validated = $request->validate([
+            'nip' => 'required|string',
+            'name' => 'required|string',
+            'gender' => 'required|in:Laki-laki,Perempuan',
+            'subject' => 'required|string',
+            'phone_number' => 'nullable|string',
+            'status' => 'required|in:Aktif,Tidak Aktif',
+        ]);
+
+        // Currently this app uses in-memory arrays for demo data.
+        // Persisting to a database requires a Teacher model and migration.
+        // For now, redirect back to the index with a success message.
+
+        return redirect()->route('teachers.index')->with('success', 'Data guru berhasil ditambahkan.');
     }
 
     public function edit($id)
