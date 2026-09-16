@@ -18,7 +18,7 @@
 
     {{-- Content Start --}}
     <main class="mx-auto w-full max-w-5xl flex-1 px-6 py-10">
-    @yield('content')
+        @yield('content')
     </main>
     {{-- Content End --}}
 

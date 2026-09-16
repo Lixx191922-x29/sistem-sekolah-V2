@@ -3,12 +3,8 @@
 @section('title', $title)
 
 @section('content')
-    <x-page-header
-        title="Daftar Kelas"
-        subtitle="Tahun Ajaran 2025/2026"
-        action-label="Tambah Kelas"
-        action-route="classes.create"
-    />
+    <x-page-header title="Daftar Kelas" subtitle="Tahun Ajaran 2025/2026" action-label="Tambah Kelas"
+        action-route="classes.create" />
 
     <div class="border border-[#E5E3DB] bg-white">
         <table class="w-full text-left text-sm">
