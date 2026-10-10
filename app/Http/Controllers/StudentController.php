@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Student\StoreRequest;
+use App\Http\Requests\Student\UpdateRequest;
 use App\Models\Student;
-use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
@@ -46,17 +47,10 @@ class StudentController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         // Validasi data yang dikirimkan dari form
-        $validatedRequest = $request->validate([
-            'nis' => ['required', 'digits:4', 'unique:students,nis'],
-            'name' => ['required', 'string'],
-            'gender' => ['required', 'in:L,P'],
-            'major' => ['required', 'string', 'in:TKJ,AKL,BID'],
-            'class' => ['required', 'string'],
-
-        ]);
+        $validatedRequest = $request->validated();
 
         // Tambahkan Data Ke Database
         Student::create($validatedRequest);
@@ -65,22 +59,14 @@ class StudentController extends Controller
         return redirect()->route('students.index');
     }
 
-
-
-    public function update(Student $student, Request $request)
+    public function update(Student $student, UpdateRequest $request)
     {
-        $validatedRequest = $request->validate([
-            'nis' => ['required', 'digits:4', 'unique:students,nis,' . $student->id],
-            'name' => ['required', 'string'],
-            'gender' => ['required', 'in:L,P'],
-            'major' => ['required', 'string', 'in:TKJ,AKL,BID'],
-            'class' => ['required', 'string'],
-        ]);
+        $validatedRequest = $request->validated();
 
-        //Update Data
+        // Update Data
         $student->update($validatedRequest);
 
-        //Handle if success
+        // Handle if success
         return redirect()->route('students.index');
     }
 
