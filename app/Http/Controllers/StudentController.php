@@ -12,7 +12,8 @@ class StudentController extends Controller
     {
         $title = 'Sistem Sekolah - Daftar Siswa';
 
-        $students = Student::select(['id', 'nis', 'name', 'class', 'major'])->get();
+        $students = Student::select(['id', 'nis', 'name', 'class', 'major'])
+        ->paginate(10);
 
         return view('students.index', [
             'title' => $title,
