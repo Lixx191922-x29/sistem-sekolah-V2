@@ -17,7 +17,7 @@
         </a>
     </div>
 
-    <form method="" action="" class="mb-6 flex flex-wrap items-end gap-3 border border-[#E5E3DB] bg-white p-5">
+    <form method="GET" action="{{ route('students.index') }}" class="mb-6 flex flex-wrap items-end gap-3 border border-[#E5E3DB] bg-white p-5">
 
     <div class="min-w-55 flex-1">
         <label for="search" class="mb-1 block text-[11px] uppercase tracking-[0.15em] text-[#16213A]">Cari</label>
@@ -30,6 +30,9 @@
         <select name="class" id="class"
             class="border border-[#E5E3DB] px-3 py-2 text-sm focus:border-[#16213A] focus:outline-none">
             <option value="">Semua Kelas</option>
+            @foreach ($schoolClasses as $class)
+                <option @selected(request('class') == $class) value="{{ $class }}">{{ $class }}</option>
+            @endforeach
         </select>
     </div>
 
@@ -38,6 +41,9 @@
         <select name="major" id="major"
             class="border border-[#E5E3DB] px-3 py-2 text-sm focus:border-[#16213A] focus:outline-none">
             <option value="">Semua Jurusan</option>
+            @foreach ($majors as $major)
+                <option @selected(request('major') == $major) value="{{ $major }}">{{ $major }}</option>
+            @endforeach
         </select>
     </div>
 
