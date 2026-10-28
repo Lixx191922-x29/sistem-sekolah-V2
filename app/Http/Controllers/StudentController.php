@@ -15,9 +15,7 @@ class StudentController extends Controller
         $search = $request->query('search');
         $class = $request->query('class');
         $major = $request->query('major');
-        $search = \is_string($search) ? $search : null;
-        $class = \is_string($class) ? $class : null;
-        $major = \is_string($major) ? $major : null;
+
         $students = Student::select(['id', 'nis', 'name', 'class', 'major'])
             ->when($search, function ($query, $search) {
                 $query->where(function ($query) use ($search) {
